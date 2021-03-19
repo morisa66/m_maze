@@ -66,12 +66,6 @@ public:
 
 	void bindScrollCallBack(GLFWscrollfun fun) { glfwSetScrollCallback(window, fun); }
 
-	void EnableZbuffer(bool enable = true) 
-	{
-		if (enable) glEnable(GL_DEPTH_TEST);
-		else glDisable(GL_DEPTH_TEST);
-	}
-
 private:
 	_pointer window;
 

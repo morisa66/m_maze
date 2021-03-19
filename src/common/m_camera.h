@@ -118,7 +118,7 @@ private:
 	bool firstMouse = {true};
 
 	bool use_collider = {false};
-	
+ 	
 	inline void updateCameraVectors()
 	{
 		front = glm::normalize(glm::vec3(
@@ -131,9 +131,10 @@ private:
 
 	bool check_collision(std::vector<m_type>& wall)
 	{
-		position.y = clamp(position.y, 1.0f, 0.0f);
+		position.y = clamp(position.y, 0.4f, 0.0f);
 
-		auto checkIn = [&](m_position _pos_, float _thresh1_, float _extra1_, float _thresh2_, float _extra2_)->bool {
+		auto checkIn = [&](m_position _pos_, float _thresh1_, float _extra1_, float _thresh2_, float _extra2_)->bool 
+		{
 			return position.x > _pos_.x - _thresh1_ + _extra1_ && position.x < _pos_.x + _thresh1_ + _extra1_
 				&& position.z > _pos_.y - _thresh2_ + _extra2_ && position.z < _pos_.y + _thresh2_ + _extra2_;
 		};
@@ -147,7 +148,7 @@ private:
 						return true;
 					break;
 				case m_direction::backward:
-					if (checkIn(it.pos, 0.5f, 0, 0.25f, -0.5f))
+					if (checkIn(it.pos, 0.5f, 0, 0.25f,-0.5f))
 						return true;
 					break;
 				case m_direction::right:

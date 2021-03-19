@@ -1,12 +1,21 @@
 
-Sun Mar 14 16:33:10 2021
+Fri Mar 19 14:58:31 2021
 create m_window.
 
-Sun Mar 14 16:33:17 2021
-destroy m_window.
+Fri Mar 19 14:59:03 2021
+the _ID of the delete object is 5
 
-Sun Mar 14 16:49:23 2021
-create m_window.
+Fri Mar 19 14:59:03 2021
+the _ID of the delete object is 4
 
-Sun Mar 14 16:49:32 2021
+Fri Mar 19 14:59:03 2021
+the _ID of the delete object is 3
+
+Fri Mar 19 14:59:03 2021
+the _ID of the delete object is 2
+
+Fri Mar 19 14:59:03 2021
+the _ID of the delete object is 1
+
+Fri Mar 19 14:59:03 2021
 destroy m_window.

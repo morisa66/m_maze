@@ -11,9 +11,8 @@
 #define MORISA_NAMESPACE_END 
 #endif
 
-
 #define DEBUG
-
+#define LOG_PATH "log.txt"
 #define IS_USE_LOG 1
 #if IS_USE_LOG
 #ifdef DEBUG

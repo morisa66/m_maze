@@ -23,21 +23,34 @@
 # 如何配置运行
 
 > 参考[这里](https://morisa66.github.io/2021/01/22/OpenGL1/)。
-> 确保std c++ 11 以上
 
 # 一些参数
 
 > 参考 `m_configture.h`
 >
 > ~~~cpp
-> #define WINDOW_WIDTH	1200
-> #define WINDOW_HEIGHT	720
+> #define WINDOW_WIDTH	1920
+> #define WINDOW_HEIGHT	1080
 > #define MAZE_SIZE		30
+> #define SPEED 3.0f
+> #define MOUSE_SENSITIVITY 0.007f
+> 
 > #define WALL_TEXTURE "asset/marble.jpg"
-> #define PLANE_TEXTURE "asset/wood.png"
-> #define LOG_PATH "log.txt"
-> #define SPEED 2.0f
-> #define MOUSE_SENSITIVITY 0.005f
+> #define FLOOR_TEXTURE "asset/wood.png"
+> #define ROOF_TEXTURE "asset/window.png"
+> #define GRASS_TEXTURE "asset/grass.png"
+> 
+> const char* skybox_paths[] =
+> {
+>     "asset/skybox/right.jpg",
+>     "asset/skybox/left.jpg",
+>     "asset/skybox/top.jpg",
+>     "asset/skybox/bottom.jpg",
+>     "asset/skybox/front.jpg",
+>     "asset/skybox/back.jpg"
+> };
+> 
+> #endif
 > ~~~
 
 # 操作方式
@@ -46,7 +59,7 @@
 > - Left_Control/Space：上\下
 > - Z/X：开启/关闭碰撞检测
 >   - 开启后高度会限制
->   - 存在部分穿模
+>   - 存在个别情况下的穿模
 >   - 如果卡在墙里面，建议关闭碰撞检测，走出来后再开启
 > - 鼠标移动控制视角方向
 > - 鼠标滚轮控制视野
